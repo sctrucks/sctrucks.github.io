@@ -16,7 +16,7 @@
     <a class="brand" href="#inizio" aria-label="S.C. Trucks, torna all'inizio"><span class="brand-icon">SC<span class="brand-dot">.</span></span><span class="brand-text">TRUCKS<small>TRASPORTI DAL 2016</small></span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri menu">☰</button>
     <nav id="menu" class="menu" aria-label="Navigazione principale">
-      <a href="#servizi">Servizi</a><a href="#azienda">Chi siamo</a><a href="#territorio">Operatività</a><a href="#contatti">Contatti</a>
+      <a href="#servizi">Servizi</a><a href="#azienda">Chi siamo</a><a href="#galleria">Galleria</a><a href="#territorio">Operatività</a><a href="#contatti">Contatti</a>
       <a class="nav-private" href="gestionale.html">Area riservata <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
@@ -48,6 +48,17 @@
   </div>
  </div>
 </section>
+<section class="section gallery" id="galleria">
+<div class="shell">
+ <div class="section-head"><div><p class="eyebrow dark">LA NOSTRA GALLERIA</p><h2>La strada,<br><em>vista da vicino.</em></h2></div><p>Mezzi, trasporti e momenti della nostra attività. Uno sguardo al lavoro quotidiano di S.C. Trucks.</p></div>
+ <div class="gallery-grid" id="gallery-grid">
+  <a href="img/img1.jpeg" target="_blank" rel="noopener"><img src="img/img1.jpeg" alt="Fotografia della galleria SCTRUCKS 1" loading="lazy"></a>
+  <a href="img/img2.jpeg" target="_blank" rel="noopener"><img src="img/img2.jpeg" alt="Fotografia della galleria SCTRUCKS 2" loading="lazy"></a>
+  <a href="img/img3.jpeg" target="_blank" rel="noopener"><img src="img/img3.jpeg" alt="Fotografia della galleria SCTRUCKS 3" loading="lazy"></a>
+ </div>
+ <p class="gallery-note">Una selezione di immagini dal mondo SCTRUCKS.</p>
+</div>
+</section>
 <section class="section story" id="azienda"><div class="shell story-grid"><div class="story-visual"><div class="story-ring"></div><div class="year-big">2016<span>→ OGGI</span></div><p>LE NOSTRE RADICI<br>SONO IN TOSCANA.</p></div><div class="story-text"><p class="eyebrow">CHI SIAMO</p><h2>Persone, mezzi,<br><em>strada.</em></h2><p>S.C. Trucks S.A.S. di Chiarugi Sara & C. nasce nel 2015 e diventa operativa all'inizio del 2016. Da allora lavoriamo nel trasporto di merci per conto terzi, con una vocazione concreta per i trasporti ADR.</p><p>Crediamo in rapporti diretti, comunicazioni chiare e attenzione al lavoro quotidiano. Ogni trasporto inizia dall'ascolto di ciò che serve al cliente.</p><a class="text-link" href="#contatti">Conosciamoci <span>↗</span></a></div></div></section>
 <section class="section coverage" id="territorio"><div class="shell coverage-grid"><div><p class="eyebrow dark">DOVE OPERIAMO</p><h2>Radici toscane.<br><em>Orizzonte nazionale.</em></h2><p>Partiamo dalla Toscana, ma siamo disponibili a valutare carichi e trasporti in tutta Italia. Raccontaci origine, destinazione e caratteristiche della merce: verificheremo insieme la soluzione.</p><a class="button dark-button" href="mailto:sctruckssas@gmail.com?subject=Disponibilit%C3%A0%20trasporto%20Italia">Verifica disponibilità ↗</a></div><div class="coverage-visual" aria-label="Illustrazione delle colline toscane e della rete stradale italiana"><div class="coverage-circle"><span>DA PONSACCO</span><strong>IN TUTTA<br>ITALIA</strong><small>DISPONIBILITÀ DI CARICO</small></div><div class="coverage-line one"></div><div class="coverage-line two"></div></div></div></section>
 <section class="section contact" id="contatti"><div class="shell contact-grid"><div><p class="eyebrow">CONTATTI</p><h2>Il prossimo viaggio<br><em>inizia qui.</em></h2><p>Hai un carico da organizzare? Scrivici con i dettagli della merce, il punto di carico e la destinazione.</p><a class="button primary" href="mailto:sctruckssas@gmail.com?subject=Richiesta%20preventivo%20trasporto">Scrivici una email ↗</a></div><div class="contact-card"><span class="contact-label">S.C. TRUCKS S.A.S.</span><div class="contact-item"><small>EMAIL</small><a href="mailto:sctruckssas@gmail.com">sctruckssas@gmail.com</a></div><div class="contact-item"><small>TELEFONO</small><a href="tel:+390587734706">+39 0587 734706</a></div><div class="contact-item"><small>SEDE</small><span>Via Gabbiano 62<br>56038 Ponsacco (PI), Toscana</span></div><div class="contact-item"><small>PARTITA IVA</small><span>02188510503</span></div></div></div></section>
@@ -55,9 +66,11 @@
 <footer class="footer"><div class="shell footer-inner"><div><strong>SC<span>.</span> TRUCKS</strong><small>Trasporti dal 2016 · Ponsacco, Toscana</small></div><p>© <span id="year">2026</span> S.C. Trucks S.A.S. · P. IVA 02188510503</p><a href="gestionale.html">Area riservata ↗</a></div><div class="shell legal">In relazione alla L. 124/2017, la società ha ricevuto nel 2021 aiuti di Stato pubblicati nel Registro Nazionale Aiuti di Stato (RNA), sezione Trasparenza.</div></footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
+
 const toggle=document.querySelector('.menu-toggle'),menu=document.querySelector('.menu');
 toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));menu.classList.toggle('open',!open);});
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
 </script>
+<script src="js/galleria.js" defer></script>
 </body>
 </html>
